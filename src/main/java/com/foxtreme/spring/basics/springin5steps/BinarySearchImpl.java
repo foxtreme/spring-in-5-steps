@@ -6,12 +6,11 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-//@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class BinarySearchImpl {
 
 	@Autowired
-	private SortAlgorithm quickSortAlgorithm;
+	//@Qualifier("quick")
+	private SortAlgorithm quickSortAlgorithm; //autowiring by name
 
 	public int binarySearch(int[] numbers, int numberToSearchFor) {
 		
